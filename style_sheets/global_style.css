@@ -1,0 +1,22 @@
+/* Normalización: */
+*{
+    box-sizing:border-box;
+    position: relative;
+    min-width: 0;
+    margin: 0;
+    font-family: roboto;
+}
+h1,h2,h3,h4{
+    text-wrap: balance;
+}
+
+p{
+    text-wrap: pretty;
+}
+/* Fin de normalización */
+/* body */
+body{
+    width: 100%;
+    background-color: var(--body-color);
+}
+/* Fin de body */
