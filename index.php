@@ -1,6 +1,6 @@
 <?php 
 //conexión a servidor
-require_once 'clases\server_conection.php'; //importamos la clase requerida
+require_once 'clases/server_conection.php'; //importamos la clase requerida
 $conexion = new ServerConection("betaadryo.com.mx","betaadry_becarios","vekx6YRz2MgZ8HS");//creamos una conexión al servidor de adryo, con host, usuario y contraseña
 $id_name_info="id";
 $id_foreing = "informacion_personal_id";
@@ -35,7 +35,7 @@ try{//intentamos la conexión para obtener datos para construir un CV
     //Creación del CV
     require_once 'clases/cv_class.php';//importamos la clase de curriculum:
     //creamos un cv a partir de los datos obtenidos
-    $cv_show = new Cv('plantillas\cv','style_sheets\curriculum_style.css',$nombre_completo,$objetivo_profesional,$foto_perfil,$contacto,$educacion,$habilidades,$sobre_mi,$experiencia_laboral,$certificaciones,$idiomas,$referencias);
+    $cv_show = new Cv('plantillas/cv','style_sheets/curriculum_style.css',$nombre_completo,$objetivo_profesional,$foto_perfil,$contacto,$educacion,$habilidades,$sobre_mi,$experiencia_laboral,$certificaciones,$idiomas,$referencias);
 }catch(Exception $e){//en caos de fallar, mostramos un mensaje sobre el fallo.
     echo "Fallo: ". $e;
 }
