@@ -207,7 +207,7 @@ class Cv extends PageComponent {
             $idiomas = $this->languages;
             $referencias = $this->references;
             //finalmente, llamamos a la plantilla central:
-            require "$this->templates_route\cv.php";
+            require "$this->templates_route/cv.php";
         }else{//en caso que no cumpla con el formato:
             Cv::create_error_Cv($this->templates_route,$this->style_sheets_route,$this->validate_cv_format()["message"])->render();
             //creamos un cv de error con el mensaje previamente realizado y lo renderizamos
